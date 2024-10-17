@@ -93,9 +93,8 @@ The following structure defines a recipe in the final stage:
 ## Example API Requests
 
 ### Add Recipe
-
-```json
 POST /api/recipe/new
+```json
 {
    "name": "Fresh Mint Tea",
    "category": "beverage",
@@ -127,7 +126,6 @@ GET /api/recipe/search?category=beverage
       "name": "Fresh Mint Tea",
       "category": "beverage",
       "date": "2021-09-06T14:11:51.006787",
-      ...
    }
 ]
 ```
