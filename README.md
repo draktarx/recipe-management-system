@@ -73,7 +73,7 @@ The following structure defines a recipe in the final stage:
    "directions": ["Boil water", "Steep ingredients", "Serve and enjoy"],
    "date": "2021-09-05T18:34:48.227624"
 }
-
+```
 
 ### Validations:
 
@@ -106,9 +106,9 @@ POST /api/recipe/new
 ```
 
 ### Retrieve Recipe by ID
-
-```json
 GET /api/recipe/1
+```json
+
 {
    "name": "Fresh Mint Tea",
    "category": "beverage",
@@ -120,9 +120,8 @@ GET /api/recipe/1
 ```
 
 ### Search Recipes by Category
-
-```json
 GET /api/recipe/search?category=beverage
+```json
 [
    {
       "name": "Fresh Mint Tea",
@@ -134,9 +133,8 @@ GET /api/recipe/search?category=beverage
 ```
 
 ### Update Recipe
-
-```json
 PUT /api/recipe/1
+```json
 {
    "name": "Ginger Tea",
    "category": "beverage",
