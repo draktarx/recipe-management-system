@@ -73,7 +73,7 @@ The following structure defines a recipe in the final stage:
    "directions": ["Boil water", "Steep ingredients", "Serve and enjoy"],
    "date": "2021-09-05T18:34:48.227624"
 }
-
+```
 
 ### Validations:
 
