@@ -1,0 +1,98 @@
+<div class="step-text">
+<p>If you want to understand <a class="theory-lookup not-relevant" href="/learn/step/5761" rel="noopener noreferrer nofollow" target="_blank" title="In Java, the factory pattern is a creational design pattern that provides an interface for creating objects in a superclass, but allows subclasses to alter the type of objects that will be created. | It's like being the CEO of a factory where you have an engineer who can create any type of product based on the specifications provided. The factory method pattern defines an interface for creating an object, but lets subclasses decide which class to instantiate. The factory pattern allows a class to delegate instantiation to subclasses, which can encapsulate the code for creating objects of a hierarchy in a special place (the factory). This way, the client code is relieved from knowing the details of the object creation process and is protected from changes in the class hierarchy. The abstract factory pattern is a type of factory pattern that encapsulates the creation of related or dependent objects. It provides a way to encapsulate a group of individual factories that have a common theme without specifying their concrete classes.">factory patterns</a>, the <strong>Factory Method</strong><em> </em><strong>pattern</strong> is a good place to start. It is probably the simplest one and the easiest to implement. </p>
+<p>Imagine a situation where you are the CEO of a factory. You are lucky to have a qualified engineer in your team who can create any type of product at your factory provided the specification: TYPE_A<em> </em>or TYPE_B<em>. </em>This is what the Factory Method<em> </em>design pattern is about.</p>
+<p>This pattern defines an interface for creating an object but leaves it to the subclasses to decide which class to <a class="theory-lookup not-relevant" href="/learn/step/5761" rel="noopener noreferrer nofollow" target="_blank" title="In Java, instantiation is the process of creating an object from a class blueprint. | This is done using the 'new' keyword followed by the class name, which allocates memory for the object and calls its constructor to initialize the object's state. Instantiated objects have their own identity and state, allowing them to interact with other objects and methods in the program. It's important to note that instantiation is a fundamental concept in object-oriented programming, as it enables the creation of multiple instances of a class, each with its own unique characteristics and behavior.">instantiate</a>. Simply put, the Factory Method allows the class to delegate <a class="theory-lookup not-relevant" href="/learn/step/5761" rel="noopener noreferrer nofollow" target="_blank" title="In Java, instantiation is the process of creating an object from a class blueprint. | This is done using the 'new' keyword followed by the class name, which allocates memory for the object and calls its constructor to initialize the object's state. Instantiated objects have their own identity and state, allowing them to interact with other objects and methods in the program. It's important to note that instantiation is a fundamental concept in object-oriented programming, as it enables the creation of multiple instances of a class, each with its own unique characteristics and behavior.">instantiation</a> to subclasses. The goal of any factory is to relieve a client from the task of creating class instances or <a class="theory-lookup not-relevant" href="/learn/step/5761" rel="noopener noreferrer nofollow" target="_blank" title="In Java, a class hierarchy is a way of organizing classes in a parent-child relationship, where a child class inherits properties and methods from its parent class, also known as the superclass. | This mechanism enables code reuse and facilitates the building of a class hierarchy. In the context of a company's activity, for example, a class hierarchy could include a base class with common data fields such as name, year of birth, and address. Derived classes could then add additional fields specific to their purpose, such as a contract number and status for a client class, or start date of work and salary for an employee class. In Java, a class can only inherit from one superclass, but a superclass can have multiple subclasses. It's important to note that constructors are not inherited, but the superclass's constructor can be invoked from the subclass. When working with class hierarchies, you can refer to a subclass object in two ways: using a subclass reference or using a superclass reference. The latter allows you to refer to any subclass using a superclass reference variable.">class hierarchy</a>. Factory Method is a special case of the <strong>Template Method pattern</strong>, the variable step responsible for creating the desired type of object.</p>
+<h5 id="the-structure-of-factory-method">The structure of Factory Method</h5>
+<p>The Factory Method pattern has the following components:</p>
+<ul><li><p><code class="language-java">Creator</code>;</p></li><li><p><code class="language-java">ConcreteCreator</code>;</p></li><li><p><code class="language-java">Product</code>;</p></li><li><p><code class="language-java">ConcreteProduct</code>.</p></li></ul>
+<p><picture><img alt="The structure of Factory Method" height="543" src="https://ucarecdn.com/7ddd67b8-4b2d-455e-b27c-42aab7213234/" width="895"/></picture></p>
+<p>These components carry out different functions: </p>
+<ol><li><p><strong>Creator</strong> declares an abstract or virtual method of creating a product. It uses the <a class="theory-lookup not-relevant" href="/learn/step/5761" rel="noopener noreferrer nofollow" target="_blank" title="In Java, a factory method is a design pattern that provides a way to delegate the instantiation of a class to a subclass. | It allows the class to delegate the responsibility of creating class instances or class hierarchy to the subclass. The factory method pattern consists of four components: Creator, Product, ConcreteCreator, and ConcreteProduct. The Creator declares an abstract or virtual method for creating a product, and the subclass implements this method in its own way. Factory methods encapsulate the code for creating objects of a hierarchy in a special place (factory), making it easier to understand and maintain. They also protect the client code from changes in the class hierarchy. This pattern is useful when we have a hierarchy of classes with one base class or interface and several subclasses, and we need to create a new subclass object depending on its type. Instead of writing a switch-case statement in client code where we will use the object, it is convenient to encapsulate the code for creating objects in a separate place and call it from the client code.">factory method</a> in its implementation. Some of the examples are <code class="language-java">HeroFactory</code>, <code class="language-java">MusicFactory</code>, <code class="language-java">FurnitureFactory</code>, <code class="language-java">DBFactory</code>.</p></li><li><p><strong>ConcreteCreator</strong> implements a factory method that returns <code class="language-java">ConcreteProduct</code>. For example, <code class="language-java">RockMusicFactory</code>, <code class="language-java">DoorFurnitureFactory</code>, <code class="language-java">MongoDBFactory</code>.</p></li><li><p><strong>Product</strong> defines the interface of products created by the factory method. For example, <code class="language-java">Robot</code>, <code class="language-java">Detail</code>, <code class="language-java">Transport</code>, <code class="language-java">Hero</code>, <code class="language-java">File</code>, <code class="language-java">Furniture</code>.</p></li><li><p><strong>ConcreteProduct</strong> determines a specific type of products, such as <code class="language-java">RobotCleaner</code>, <code class="language-java">ElfHero</code>, <code class="language-java">MP3File</code>, <code class="language-java">Detail13</code>.</p></li></ol>
+<p>The pattern is available in JDK in <code class="language-java">java.util</code>, <code class="language-java">java.io</code> and <code class="language-java">javax.persistence</code>.</p>
+<h5 id="practice-example">Practice example</h5>
+<p>Let's make our abstract example from the beginning a little more concrete and detailed. As you remember, you are the CEO of a factory. Suppose the factory makes tables: they are truly indispensable in the house. You work with a qualified employee, an engineer, who, as you might have guessed, is your factory method.</p>
+<p>First, let's define the <a class="theory-lookup not-relevant" href="/learn/step/5761" rel="noopener noreferrer nofollow" target="_blank" title="In Java, an abstract class is a class declared with the keyword abstract that represents an abstract concept and is used as a base class for subclasses. | It can have fields, constructors, and abstract methods, which are declared by adding the keyword abstract and have a declaration (modifier, a return type, and a signature) but don't have an implementation. Each concrete (non-abstract) subclass must implement these abstract methods. An abstract class cannot be instantiated, and its abstract method's implementation is provided by concrete subclasses.">abstract class</a> <code class="language-java">Table</code><em>:</em></p>
+<pre><code class="language-java">abstract class Table {
+    private String name;
+
+    Table(String name) {
+        this.name = name;
+    }
+
+    String getName() {
+        return name;
+    }
+
+    void attachLegs() {
+        System.out.println("Attaching Legs");
+    }
+
+    void attachTableTop() {
+        System.out.println("Attaching tabletop");
+    }
+}</code></pre>
+<p>Second, we should define two specific tables: the <code class="language-java">TableOffice</code><em> </em>and <code class="language-java">TableKitchen</code> classes. Note that the abstract class has a constructor, which is sometimes tricky for Java developers with little experience. </p>
+<pre><code class="language-java">class TableOffice extends Table {
+    TableOffice(String name) {
+        super(name);
+    }
+}
+
+class TableKitchen extends Table {
+    TableKitchen(String name) {
+        super(name);
+    }
+}</code></pre>
+<p>Third, let's create our factory. We called it <code class="language-java">TableStore</code><em>, </em>the implementation of the abstract <code class="language-java">TableFactory</code><em>: </em></p>
+<pre><code class="language-java">abstract class TableFactory {
+
+    abstract Table createTable(String type);
+
+    Table orderTable(String type) {
+        Table table = createTable(type);
+        if (table == null) {
+            System.out.println("Sorry, we are not able to create this kind of table\n");
+            return null;
+        }
+        System.out.println("Making " + table.getName());
+        table.attachLegs();
+        table.attachTableTop();
+        System.out.println("Created " + table.getName() + "\n");
+        return table;
+    }
+}
+
+class TableStore extends TableFactory {
+    @Override
+    Table createTable(String type) {
+        if (type.equals("office")) {
+            return new TableOffice("Office Table");
+        } else if (type.equals("kitchen")) {
+            return new TableKitchen("Kitchen Table");
+        } else return null;
+    }
+}</code></pre>
+<p>Finally, here is our <code class="language-java">TestDrive</code><em> </em>code and the output: </p>
+<pre><code class="language-java">class TestDrive {
+    public static void main(String[] args) {
+        TableStore tableStore = new TableStore();
+        Table strangeTable = tableStore.orderTable("Mysterious table");
+        Table officeTable = tableStore.orderTable("office");
+        Table kitchenTable = tableStore.orderTable("kitchen");
+    }
+}</code></pre>
+<pre><code class="language-no-highlight">Sorry, we are unable to create this kind of table
+
+Making Office Table
+Attaching Legs
+Attaching tabletop
+Created Office Table
+
+Making Kitchen Table
+Attaching Legs
+Attaching tabletop
+Created Kitchen Table</code></pre>
+<h5 id="conclusion">Conclusion</h5>
+<p>The Factory Method pattern comes in handy in situations when you need to:</p>
+<ul><li><p>deal with a complicated process of constructing objects;</p></li><li><p>reduce the time for adding another product;</p></li><li><p>replace one product with another.<br/> </p></li></ul>
+</div>

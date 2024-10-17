@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="GradleMigrationSettings" migrationVersion="1" />
   <component name="GradleSettings">
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
@@ -10,6 +11,22 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/Recipe Management System/task" />
+            <option value="$PROJECT_DIR$/Recipe Management System/task/build/classes/java" />
+            <option value="$PROJECT_DIR$/Recipe Management System/task/build/generated/sources/annotationProcessor/java" />
+            <option value="$PROJECT_DIR$/Recipe Management System/task/build/generated/sources/headers/java" />
+            <option value="$PROJECT_DIR$/Recipe Management System/task/build/reports/tests" />
+            <option value="$PROJECT_DIR$/Recipe Management System/task/build/test-results" />
+            <option value="$PROJECT_DIR$/Recipe Management System/task/build/tmp" />
+            <option value="$PROJECT_DIR$/Topics/Factory method/Burger store" />
+            <option value="$PROJECT_DIR$/Topics/Factory method/Clocks" />
+            <option value="$PROJECT_DIR$/Topics/Factory method/Robot" />
+            <option value="$PROJECT_DIR$/Topics/Factory method/The purpose of the pattern" />
+            <option value="$PROJECT_DIR$/Topics/Factory method/Theory" />
+            <option value="$PROJECT_DIR$/Topics/The utility class Collections/An uncompiled statement" />
+            <option value="$PROJECT_DIR$/Topics/The utility class Collections/Non-existing methods" />
+            <option value="$PROJECT_DIR$/Topics/The utility class Collections/Rotating table" />
+            <option value="$PROJECT_DIR$/Topics/The utility class Collections/Sorting sequences" />
+            <option value="$PROJECT_DIR$/Topics/The utility class Collections/Theory" />
             <option value="$PROJECT_DIR$/util" />
           </set>
         </option>

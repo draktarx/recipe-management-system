@@ -12,6 +12,46 @@ files:
   - name: test/RecipesApplicationTest.java
     visible: false
     learner_created: false
-feedback_link: https://hyperskill.org/projects/180/stages/921/implement#comment
-status: Unchecked
+  - name: src/recipes/controller/RecipeRestController.java
+    visible: true
+    learner_created: true
+  - name: src/recipes/repository/RecipeRepository.java
+    visible: true
+    learner_created: true
+  - name: src/recipes/service/RecipeService.java
+    visible: true
+    learner_created: true
+  - name: src/recipes/entity/Recipe.java
+    visible: true
+    learner_created: true
+  - name: src/recipes/SecurityConfig.java
+    visible: true
+    learner_created: true
+  - name: src/recipes/dto/AuthUserDTO.java
+    visible: true
+    learner_created: true
+  - name: src/recipes/service/UserService.java
+    visible: true
+    learner_created: true
+  - name: src/recipes/repository/UserRepository.java
+    visible: true
+    learner_created: true
+  - name: src/recipes/entity/AuthUser.java
+    visible: true
+    learner_created: true
+  - name: src/recipes/dto/AuthUserAdapter.java
+    visible: true
+    learner_created: true
+  - name: src/recipes/service/AuthUserCryptService.java
+    visible: true
+    learner_created: true
+  - name: src/recipes/controller/AuthUserRestController.java
+    visible: true
+    learner_created: true
+feedback_link: https://hyperskill.org/learn/step/13092#comment
+status: Solved
+feedback:
+  message: Well done! You've finished the project. Select a new project on <a href="https://hyperskill.org/projects">Hyperskill</a>
+    to continue learning.
+  time: "Tue, 15 Oct 2024 23:31:05 UTC"
 record: -1
